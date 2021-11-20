@@ -7,8 +7,8 @@ void vet(int v[],int &n){ //função para ler o vetor de n posições;
     cin>>v[i];
 }
 bool verif_crescente(int v[],int n){
-    int cont = 1; //(c2) (1x)
-    if(n > 1){ //(c3) (1x)
+    int cont = 1; //(c2) (1x) no MELHOR caso; 
+    if(n > 1){ //(c3) (1x) no MELHOR caso; 
     for(int i = 1; i < n; i++){ //PIOR caso:(c4(n vezes));
     				  // MELHOR caso: ele rodará uma ÚNICA vez; 
         if(v[i-1] < v[i]){ /*PIOR caso: (c5) Rodará n vezes no , e no MELHOR caso rodará uma ÚNICA vez, pois, 
@@ -50,5 +50,5 @@ Complexidade de pior caso:
 
 Complexidade de melhor caso: 
 Melhor caso seria o vetor estar ordenado de forma descrecente, pois rapidamente ele iria reconhecer que o vetor está desordenado.
-
- */
+Como mostrado nas linhas 10, 11 e 12, os comandos nelas presentes rodaria somente 1 vez no MELHOR caso, portanto, 1 + 1 + 1 = 3, em notação de BigO = O(1)
+*/
